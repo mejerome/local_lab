@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+
+  vars:
+    firewall_allowed_tcp_ports:
+      - "22"
+      - "3306"
+    postgres_user: postgres
+    postgres_password: "secret"
+    postgresql_databases:
+      - name: exampledb
+        owner: postgres
+        encoding: UTF8
+        state: present
+    postgresql_hba_entries:
+      - { type: host, database: all, user: postgres, address: '0.0.0.0/0', auth_method: trust }
+
+  roles:
+    - geerlingguy.postgresql
+    - geerlingguy.firewall
