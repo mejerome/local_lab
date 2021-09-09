@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 - hosts: all
+=======
+- hosts: db
+>>>>>>> 272ae1813a02c268b97aaa7fd407ac3819ce10c3
   become: yes
 
   vars_files:

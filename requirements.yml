@@ -9,5 +9,9 @@ roles:
   - name: geerlingguy.php-memcached
   - name: geerlingguy.mysql
   - name: geerlingguy.memcached
+<<<<<<< HEAD
   - name: geerlingguy.postgresql
   - name: geerlingguy.haproxy
+=======
+  - name: geerlingguy.postgresql
+>>>>>>> 272ae1813a02c268b97aaa7fd407ac3819ce10c3

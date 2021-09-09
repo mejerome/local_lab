@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 - hosts: all
+=======
+- hosts: web
+>>>>>>> 272ae1813a02c268b97aaa7fd407ac3819ce10c3
   become: true
   gather_facts: true
   vars:
@@ -32,3 +36,12 @@
         owner: root
         group: root
         mode: 0644
+<<<<<<< HEAD
+=======
+
+    - debug: var=hostvars[inventory_hostname]['ansible_enp0s8']['ipv4']['address']
+
+
+  
+    
+>>>>>>> 272ae1813a02c268b97aaa7fd407ac3819ce10c3
