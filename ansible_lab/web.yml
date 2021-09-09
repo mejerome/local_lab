@@ -1,0 +1,29 @@
+---
+- hosts: web1
+  become: true
+
+  tasks:
+    - name: Install the package git, wget and curl are present
+      apt:
+        name: 
+          - git
+          - wget
+          - curl
+        state: present
+        update_cache: yes
+
+    - name: Install the package "build-essential"
+      apt:
+        name: build-essential
+        state: present
+
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: present
+    
+    - name: Start apache2 service
+      service:
+        name: apache2
+        state: started
+        enabled: yes

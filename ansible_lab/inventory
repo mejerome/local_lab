@@ -1,8 +1,19 @@
-[web_svr]
+[svr]
 web1 ansible_host=192.168.3.11
 web2 ansible_host=192.168.3.12
+db1 ansible_host=192.168.3.13
 
-[web_svr:vars]
+[web1]
+web1
+
+[web]
+web1
+web2
+
+[data]
+db1
+
+[svr:vars]
 ansible_connection=ssh        
 ansible_user=vagrant
-ansible_ssh_pass=vagrant
+ansible_ssh_private_key_file=/home/jerome/.vagrant.d/insecure_private_key
